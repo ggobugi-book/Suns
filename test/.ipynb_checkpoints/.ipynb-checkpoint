@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "code",
-   "execution_count": 16,
+   "execution_count": 2,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -21,7 +21,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 17,
+   "execution_count": 3,
    "metadata": {
     "scrolled": false
    },
@@ -47,7 +47,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 18,
+   "execution_count": 4,
    "metadata": {},
    "outputs": [
     {
@@ -66,50 +66,20 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 26,
+   "execution_count": 5,
    "metadata": {},
-   "outputs": [
-    {
-     "ename": "AttributeError",
-     "evalue": "'list' object has no attribute 'key'",
-     "output_type": "error",
-     "traceback": [
-      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
-      "\u001b[1;31mAttributeError\u001b[0m                            Traceback (most recent call last)",
-      "\u001b[1;32m<ipython-input-26-614a4021440f>\u001b[0m in \u001b[0;36m<module>\u001b[1;34m\u001b[0m\n\u001b[0;32m      3\u001b[0m \u001b[1;32mfor\u001b[0m \u001b[0msentence\u001b[0m \u001b[1;32min\u001b[0m \u001b[0msent\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m      4\u001b[0m     \u001b[0mmorph\u001b[0m \u001b[1;33m=\u001b[0m \u001b[0mtwitter\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0mpos\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0msentence\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[1;32m----> 5\u001b[1;33m     \u001b[1;32mif\u001b[0m \u001b[0mlen\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0mmorph\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0mkey\u001b[0m\u001b[1;33m(\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m>\u001b[0m\u001b[1;36m1\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0m\u001b[0;32m      6\u001b[0m         \u001b[0msentences_tag\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0mappend\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0mmorph\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n",
-      "\u001b[1;31mAttributeError\u001b[0m: 'list' object has no attribute 'key'"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "#형태소분석\n",
     "sentences_tag = []\n",
     "for sentence in sent:\n",
     "    morph = twitter.pos(sentence)\n",
-    "    if len(morph)>1:\n",
-    "        sentences_tag.append(morph)"
+    "    sentences_tag.append(morph)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 22,
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "[('이광수', 'Noun'), ('<', 'Punctuation'), ('무정', 'Noun'), ('>', 'Punctuation'), ('\\n\\n\\n', 'Foreign'), ('1', 'Number'), ('\\n', 'Foreign'), ('경성', 'Noun'), ('학교', 'Noun'), ('영어', 'Noun'), ('교사', 'Noun'), ('이형식', 'Noun'), ('은', 'Josa'), ('오후', 'Noun'), ('두시', 'Noun'), ('사', 'Modifier'), ('년', 'Noun'), ('급', 'Suffix'), ('영어', 'Noun'), ('시간', 'Noun'), ('을', 'Josa'), ('마치', 'Noun'), ('고', 'Josa'), ('내려', 'Verb'), ('쪼이는', 'Verb'), ('유월', 'Noun'), ('볕', 'Noun'), ('에', 'Josa'), ('땀', 'Noun'), ('을', 'Josa'), ('흘리면서', 'Verb'), ('안동', 'Noun'), ('김', 'Noun'), ('장로', 'Noun'), ('의', 'Josa'), ('집', 'Noun'), ('으로', 'Josa'), ('간다', 'Noun'), ('.', 'Punctuation'), ('김', 'Noun'), ('장로', 'Noun'), ('의', 'Josa'), ('딸', 'Noun'), ('선형', 'Noun'), ('(', 'Punctuation'), ('善馨', 'Foreign'), (')', 'Punctuation'), ('이', 'Noun'), ('가', 'Josa'), ('명년', 'Noun'), ('미국', 'Noun'), ('유학', 'Noun'), ('을', 'Josa'), ('가기', 'Noun'), ('위', 'Noun'), ('하여', 'Verb'), ('영어', 'Noun'), ('를', 'Josa'), ('준비', 'Noun'), ('할', 'Verb'), ('차로', 'Noun'), ('이형식', 'Noun'), ('을', 'Josa'), ('매일', 'Noun'), ('한', 'Verb'), ('시간', 'Noun'), ('씩', 'Suffix'), ('가정교사', 'Noun'), ('로', 'Josa'), ('고', 'Modifier'), ('빙하', 'Noun'), ('여', 'Josa'), ('오늘', 'Noun'), ('오후', 'Noun'), ('세시', 'Noun'), ('부터', 'Josa'), ('수업', 'Noun'), ('을', 'Josa'), ('시작', 'Noun'), ('하게', 'Verb'), ('되었음', 'Verb'), ('이라', 'Verb'), ('.', 'Punctuation'), ('이형식', 'Noun'), ('은', 'Josa'), ('아직', 'Adverb'), ('독신', 'Noun'), ('이라', 'Josa'), (',', 'Punctuation'), ('남', 'Noun'), ('의', 'Josa'), ('여자', 'Noun'), ('와', 'Josa'), ('가까이', 'Noun'), ('교제', 'Noun'), ('하여', 'Verb'), ('본', 'Verb'), ('적', 'Noun'), ('이', 'Josa'), ('없고', 'Adjective'), ('이렇게', 'Adverb'), ('순결한', 'Adjective'), ('청년', 'Noun'), ('이', 'Josa'), ('흔히', 'Adjective'), ('그러한', 'Adjective'), ('모양', 'Noun'), ('으로', 'Josa'), ('젊은', 'Adjective'), ('여자', 'Noun'), ('를', 'Josa'), ('대하', 'Noun'), ('면', 'Josa'), ('자연', 'Noun'), ('수줍은', 'Adjective'), ('생각', 'Noun'), ('이', 'Josa'), ('나서', 'Verb'), ('얼굴', 'Noun'), ('이', 'Josa'), ('확확', 'Adverb'), ('달며', 'Verb'), ('고개', 'Noun'), ('가', 'Josa'), ('저절로', 'Noun'), ('숙여진다', 'Verb'), ('.', 'Punctuation'), ('남자', 'Noun'), ('로', 'Josa'), ('생겨나서', 'Verb'), ('이러함이', 'Adjective'), ('못', 'VerbPrefix'), ('생겼다면', 'Verb'), ('못', 'VerbPrefix'), ('생겼다고도', 'Verb'), ('하려니와', 'Verb'), (',', 'Punctuation'), ('여자', 'Noun'), ('를', 'Josa'), ('보면', 'Verb'), ('아무러한', 'Adjective'), ('핑계', 'Noun'), ('를', 'Josa'), ('얻', 'Verb'), ('어서', 'Noun'), ('라도', 'Josa'), ('가까이', 'Noun'), ('가려', 'Verb'), ('하고', 'Verb'), (',', 'Punctuation'), ('말', 'Noun'), ('한마디', 'Noun'), ('라도', 'Josa'), ('하여', 'Verb'), ('보려', 'Verb'), ('하는', 'Verb'), ('잘난', 'Adjective'), ('사람', 'Noun'), ('들', 'Suffix'), ('보다는', 'Josa'), ('나으리라', 'Verb'), ('.', 'Punctuation'), ('형식', 'Noun'), ('은', 'Josa'), ('여러', 'Noun'), ('가지', 'Noun'), ('생각', 'Noun'), ('을', 'Josa'), ('한다', 'Verb'), ('.', 'Punctuation'), ('우선', 'Noun'), ('처음', 'Noun'), ('만나서', 'Verb'), ('어떻게', 'Adjective'), ('인사', 'Noun'), ('를', 'Josa'), ('할까', 'Verb'), ('.', 'Punctuation'), ('남자', 'Noun'), ('남자', 'Noun'), ('간', 'Noun'), ('에', 'Josa'), ('하는', 'Verb'), ('모양', 'Noun'), ('으로', 'Josa'), (',', 'Punctuation'), ('‘', 'Foreign'), ('처음', 'Noun'), ('보입니다', 'Verb'), ('.', 'Punctuation'), ('저', 'Noun'), ('는', 'Josa'), ('이형식', 'Noun'), ('이', 'Josa'), ('올시다', 'Verb'), ('’', 'Punctuation'), ('이렇게', 'Adverb'), ('할까', 'Verb'), ('.', 'Punctuation'), ('그러나', 'Conjunction'), ('잠시', 'Noun'), ('라도', 'Josa'), ('나', 'Noun'), ('는', 'Josa'), ('가르치는', 'Verb'), ('자', 'Noun'), ('요', 'Josa'), (',', 'Punctuation'), ('저', 'Noun'), ('는', 'Josa'), ('배우는', 'Verb'), ('자라', 'Noun'), (',', 'Punctuation'), ('그러면', 'Adverb'), ('미상불', 'Adverb'), ('무슨', 'Noun'), ('차별', 'Noun'), ('이', 'Josa'), ('있지나', 'Adjective'), ('아니', 'Adjective'), ('할까', 'Verb'), ('.', 'Punctuation'), ('저편', 'Noun'), ('에서', 'Josa'), ('먼저', 'Noun'), ('내게', 'Verb'), ('인사', 'Noun'), ('를', 'Josa'), ('하', 'Exclamation'), ('거든', 'Verb'), ('그제야', 'Adverb'), ('나도', 'Verb'), ('인사', 'Noun'), ('를', 'Josa'), ('하는', 'Verb'), ('것', 'Noun'), ('이', 'Josa'), ('마땅하지', 'Adjective'), ('아니', 'Adjective'), ('할까', 'Verb'), ('.', 'Punctuation'), ('그것', 'Noun'), ('은', 'Josa'), ('그러려니와', 'Adjective'), ('교수', 'Noun'), ('하는', 'Verb'), ('방법', 'Noun'), ('은', 'Josa'), ('어떻게나', 'Adjective'), ('할는지', 'Verb'), ('.', 'Punctuation'), ('어제', 'Noun'), ('김', 'Noun'), ('장로', 'Noun'), ('에게', 'Josa'), ('그', 'Noun'), ('청탁', 'Noun'), ('을', 'Josa'), ('들은', 'Verb'), ('뒤', 'Noun'), ('로', 'Josa'), ('지금껏', 'Noun'), ('생각', 'Noun'), ('하', 'Suffix'), ('건마는', 'Noun'), ('무슨', 'Noun'), ('묘방', 'Noun'), ('이', 'Josa'), ('아니', 'Adjective'), ('생긴다', 'Verb'), ('.', 'Punctuation'), ('가운데', 'Noun'), ('책상', 'Noun'), ('을', 'Josa'), ('하나', 'Noun'), ('놓고', 'Verb'), (',', 'Punctuation'), ('거기', 'Noun'), ('마주', 'Noun'), ('앉아서', 'Verb'), ('가르칠까', 'Verb'), ('.', 'Punctuation'), ('그러면', 'Adverb'), ('입김', 'Noun'), ('과', 'Josa'), ('입김', 'Noun'), ('이', 'Josa'), ('서로', 'Noun'), ('마주치렷다', 'Verb'), ('.', 'Punctuation'), ('혹', 'Noun'), ('저편', 'Noun'), ('히', 'Adverb'), ('사시', 'Noun'), ('가미', 'Noun'), ('(', 'Punctuation'), ('양갈래', 'Noun'), ('로', 'Josa'), ('딴', 'Verb'), ('머릿단', 'Noun'), (')', 'Punctuation'), ('가', 'Verb'), ('내', 'Noun'), ('이마', 'Noun'), ('에', 'Josa'), ('스칠', 'Verb'), ('때', 'Noun'), ('도', 'Josa'), ('있으렷다', 'Adjective'), ('.', 'Punctuation'), ('책상', 'Noun'), ('아래', 'Noun'), ('에서', 'Josa'), ('무릎', 'Noun'), ('과', 'Josa'), ('무릎', 'Noun'), ('이', 'Josa'), ('가만히', 'Adverb'), ('마주', 'Noun'), ('닿기도', 'Verb'), ('하렷다', 'Noun'), ('.', 'Punctuation'), ('이렇게', 'Adverb'), ('생각', 'Noun'), ('하고', 'Josa'), ('형식', 'Noun'), ('은', 'Josa'), ('얼굴', 'Noun'), ('이', 'Josa'), ('붉어지며', 'Adjective'), ('혼자', 'Noun'), ('빙긋', 'Noun'), ('웃었다', 'Verb'), ('.', 'Punctuation'), ('아니', 'Adjective'), ('아니', 'Adjective'), ('?', 'Punctuation'), ('그러다가', 'Conjunction'), ('만일', 'Noun'), ('마음', 'Noun'), ('으로라도', 'Josa'), ('죄', 'Noun'), ('를', 'Josa'), ('범', 'Noun'), ('하게', 'Verb'), ('되면', 'Verb'), ('어찌', 'Noun'), ('하게', 'Verb'), ('.', 'Punctuation'), ('옳다', 'Adjective'), ('?', 'Punctuation'), ('될', 'Verb'), ('수', 'Noun'), ('있는', 'Adjective'), ('대로', 'Noun'), ('책상', 'Noun'), ('에서', 'Josa'), ('멀리', 'Noun'), ('떠나', 'Verb'), ('앉겠다', 'Verb'), ('.', 'Punctuation'), ('만일', 'Noun'), ('저편', 'Noun'), ('무릎', 'Noun'), ('이', 'Josa'), ('내게', 'Verb'), ('닿거든', 'Verb'), ('깜짝', 'Noun'), ('놀라며', 'Verb'), ('내', 'Noun'), ('무릎', 'Noun'), ('을', 'Josa'), ('치우리라', 'Verb'), ('.', 'Punctuation'), ('그러나', 'Conjunction'), ('내', 'Noun'), ('입', 'Noun'), ('에서', 'Josa'), ('무슨', 'Noun'), ('냄새', 'Noun'), ('가', 'Josa'), ('나면', 'Verb'), ('여자', 'Noun'), ('에게', 'Josa'), ('대하', 'Noun'), ('여', 'Josa'), ('실례', 'Noun'), ('라', 'Josa'), (',', 'Punctuation'), ('점심', 'Noun'), ('후', 'Noun'), ('에는', 'Josa'), ('아직', 'Adverb'), ('담배', 'Noun'), ('는', 'Josa'), ('아니', 'Adjective'), ('먹었건마는', 'Verb'), (',', 'Punctuation'), ('하고', 'Verb'), ('손', 'Noun'), ('으로', 'Josa'), ('입', 'Noun'), ('을', 'Josa'), ('가리우고', 'Verb'), ('입김', 'Noun'), ('을', 'Josa'), ('후', 'Noun'), ('내어', 'Verb'), ('불어', 'Noun'), ('본다', 'Verb'), ('.', 'Punctuation'), ('그', 'Noun'), ('입김', 'Noun'), ('이', 'Josa'), ('손바닥', 'Noun'), ('에', 'Josa'), ('반사', 'Noun'), ('되어', 'Verb'), ('코로', 'Noun'), ('들어가면', 'Verb'), ('냄새', 'Noun'), ('의', 'Josa'), ('유무', 'Noun'), ('를', 'Josa'), ('시험', 'Noun'), ('할', 'Verb'), ('수', 'Noun'), ('있', 'Adjective'), ('음', 'Noun'), ('이라', 'Josa'), ('.', 'Punctuation'), ('형식', 'Noun'), ('은', 'Josa'), (',', 'Punctuation'), ('아뿔싸', 'Noun'), ('!', 'Punctuation'), ('내', 'Noun'), ('가', 'Josa'), ('어찌하여', 'Noun'), ('이러한', 'Adjective'), ('생각', 'Noun'), ('을', 'Josa'), ('하는가', 'Verb'), (',', 'Punctuation'), ('내', 'Noun'), ('마음', 'Noun'), ('이', 'Josa'), ('이렇게', 'Adverb'), ('약하던가', 'Adjective'), ('하면서', 'Verb'), ('두', 'Noun'), ('주먹', 'Noun'), ('을', 'Josa'), ('불끈', 'Noun'), ('쥐', 'Noun'), ('고', 'Josa'), ('전신', 'Noun'), ('에', 'Josa'), ('힘', 'Noun'), ('을', 'Josa'), ('주어', 'Noun'), ('이러한', 'Adjective'), ('약한', 'Adjective'), ('생각', 'Noun'), ('을', 'Josa'), ('떼어', 'Verb'), ('버리려', 'Verb'), ('하나', 'Noun'), (',', 'Punctuation'), ('가슴속', 'Noun'), ('에는', 'Josa'), ('이상하게', 'Adjective'), ('불길', 'Noun'), ('이', 'Josa'), ('확확', 'Adverb'), ('일어난다', 'Noun'), ('.', 'Punctuation'), ('이', 'Determiner'), ('때', 'Noun'), ('에', 'Josa'), (',', 'Punctuation'), ('\\n', 'Foreign'), ('“', 'Foreign'), ('미스터', 'Noun'), ('리', 'Noun'), (',', 'Punctuation'), ('어디', 'Noun'), ('로', 'Josa'), ('가는가', 'Verb'), ('”', 'Foreign'), ('하는', 'Verb'), ('소리', 'Noun'), ('에', 'Josa'), ('깜짝', 'Noun'), ('놀라', 'Verb'), ('고개', 'Noun'), ('를', 'Josa'), ('들었다', 'Verb'), ('.', 'Punctuation'), ('쾌활하기로', 'Adjective'), ('동류', 'Noun'), ('간', 'Suffix'), ('에', 'Josa'), ('유명한', 'Adjective'), ('신우선', 'Noun'), ('(', 'Punctuation'), ('申友善', 'Foreign'), (')', 'Punctuation'), ('이', 'Noun'), ('가', 'Josa'), ('대팻밥', 'Noun'), ('모자', 'Noun'), ('를', 'Josa'), ('갖춰', 'Verb'), ('쓰고', 'Verb'), ('활개', 'Noun'), ('를', 'Josa'), ('치', 'Noun'), ('며', 'Josa'), ('내려온다', 'Verb'), ('.', 'Punctuation'), ('형식', 'Noun'), ('은', 'Josa'), ('자기', 'Noun'), ('마음속', 'Noun'), ('을', 'Josa'), ('꿰뚫어', 'Verb'), ('보지', 'Noun'), ('나', 'Josa'), ('아니한', 'Adjective'), ('가', 'Verb'), ('하여', 'Verb'), ('두', 'Noun'), ('뺨', 'Noun'), ('이', 'Josa'), ('한번', 'Noun'), ('더', 'Noun'), ('후끈하는', 'Adjective'), ('것', 'Noun'), ('을', 'Josa'), ('겨우', 'Noun'), ('참고', 'Noun'), ('지어서', 'Verb'), ('쾌활하게', 'Adjective'), ('웃으면서', 'Verb'), (',', 'Punctuation'), ('“', 'Foreign'), ('오래', 'Adverb'), ('막혔구려', 'Verb'), ('”', 'Foreign'), ('하고', 'Verb'), ('손', 'Noun'), ('을', 'Josa'), ('잡아', 'Verb'), ('흔들었다', 'Verb'), ('.', 'Punctuation'), ('\\n', 'Foreign'), ('“', 'Foreign'), ('오래', 'Adverb'), ('막혔', 'Verb'), ('구려', 'Noun'), ('는', 'Josa'), ('무슨', 'Noun'), ('막혔', 'Verb'), ('구려', 'Noun'), ('야', 'Josa'), ('.', 'Punctuation'), ('일전', 'Noun'), ('허교', 'Noun'), ('하기로', 'Verb'), ('약속', 'Noun'), ('하지', 'Verb'), ('않았는가', 'Verb'), ('.', 'Punctuation'), ('”', 'Foreign'), ('\\n', 'Foreign'), ('형식', 'Noun'), ('은', 'Josa'), ('얼마', 'Noun'), ('큼', 'Verb'), ('마음', 'Noun'), ('에', 'Josa'), ('수치', 'Noun'), ('한', 'Josa'), ('생각', 'Noun'), ('이', 'Josa'), ('나서', 'Verb'), ('고개', 'Noun'), ('를', 'Josa'), ('돌리며', 'Verb'), (',', 'Punctuation'), ('\\n', 'Foreign'), ('“', 'Foreign'), ('아직', 'Adverb'), ('그런', 'Adjective'), ('말', 'Noun'), ('에', 'Josa'), ('익숙', 'Noun'), ('지를', 'Verb'), ('못', 'VerbPrefix'), ('해서', 'Verb'), ('……', 'Punctuation'), ('”', 'Foreign'), ('하고', 'Verb'), ('말끝', 'Noun'), ('을', 'Josa'), ('못', 'Noun'), ('맺는다', 'Verb'), ('.', 'Punctuation'), ('\\n', 'Foreign'), ('“', 'Foreign'), ('대관절', 'Noun'), ('어디', 'Noun'), ('로', 'Josa'), ('가는', 'Verb'), ('길', 'Noun'), ('인가', 'Josa'), ('?', 'Punctuation'), ('급', 'Noun'), ('지', 'Josa'), ('않거든', 'Verb'), ('점심', 'Noun'), ('이나', 'Josa'), ('하세', 'Verb'), ('그려', 'Verb'), ('.', 'Punctuation'), ('”', 'Foreign'), ('\\n', 'Foreign'), ('“', 'Foreign'), ('점심', 'Noun'), ('은', 'Josa'), ('먹었는걸', 'Verb'), ('.', 'Punctuation'), ('”', 'Foreign'), ('\\n', 'Foreign'), ('“', 'Foreign'), ('그러면', 'Adverb'), ('맥주', 'Noun'), ('나', 'Josa'), ('한잔', 'Noun'), ('먹지', 'Verb'), ('.', 'Punctuation'), ('”', 'Foreign'), ('\\n', 'Foreign'), ('“', 'Foreign'), ('내', 'Noun'), ('가', 'Josa'), ('술', 'Noun'), ('을', 'Josa'), ('먹는가', 'Verb'), ('.', 'Punctuation'), ('”', 'Foreign'), ('\\n', 'Foreign'), ('“', 'Foreign'), ('그만두게', 'Verb'), ('.', 'Punctuation'), ('사나이', 'Noun'), ('가', 'Josa'), ('맥주', 'Noun'), ('한', 'Verb'), ('잔', 'Noun'), ('도', 'Josa'), ('못', 'Noun'), ('먹으면', 'Verb'), ('어떡한단', 'Adjective'), ('말', 'Noun'), ('인가', 'Josa'), ('.', 'Punctuation'), ('자', 'Noun'), ('잡말', 'Verb'), ('말고', 'Josa'), ('가세', 'Noun'), ('”', 'Foreign'), ('하고', 'Verb'), ('손', 'Noun'), ('을', 'Josa'), ('끌', 'Noun'), ('고', 'Josa'), ('안동', 'Noun'), ('파출소', 'Noun'), ('앞', 'Noun'), ('청국', 'Noun'), ('요릿집', 'Noun'), ('으로', 'Josa'), ('들어간다', 'Verb'), ('.', 'Punctuation'), ('\\n', 'Foreign'), ('“', 'Foreign'), ('아닐세', 'Adjective'), ('.', 'Punctuation'), ('다른', 'Noun'), ('날', 'Noun'), ('같으면', 'Adjective'), ('사양', 'Noun'), ('도', 'Josa'), ('아니하겠', 'Adjective'), ('네', 'Determiner'), ('마는', 'Noun'), ('”', 'Foreign'), ('하고', 'Verb'), ('다른', 'Noun'), ('날', 'Noun'), ('이란', 'Josa'), ('말', 'Noun'), ('이', 'Josa'), ('이상하게나', 'Adjective'), ('아니', 'Adjective'), ('들렸는가', 'Verb'), ('하여', 'Verb'), ('가슴', 'Noun'), ('이', 'Josa'), ('뛰면서', 'Verb'), (',', 'Punctuation'), ('\\n', 'Foreign'), ('“', 'Foreign'), ('오늘', 'Noun'), ('은', 'Josa'), ('좀', 'Noun'), ('일이', 'Modifier'), ('있어', 'Adjective'), ('.', 'Punctuation'), ('”', 'Foreign'), ('\\n', 'Foreign'), ('“', 'Foreign'), ('일', 'Noun'), ('?', 'Punctuation'), ('무슨', 'Noun'), ('일', 'Noun'), ('?', 'Punctuation'), ('무슨', 'Noun'), ('술', 'Noun'), ('못', 'Noun'), ('먹을', 'Verb'), ('일이', 'Modifier'), ('있단', 'Adjective'), ('말', 'Noun'), ('인가', 'Josa'), ('.', 'Punctuation'), ('”', 'Foreign'), ('\\n', 'Foreign'), ('다른', 'Noun'), ('사람', 'Noun'), ('같으면', 'Adjective'), ('이러한', 'Adjective'), ('경우', 'Noun'), ('에', 'Josa'), ('다만', 'Noun'), ('‘', 'Foreign'), ('급히', 'Adjective'), ('좀', 'Noun'), ('볼일', 'Noun'), ('이', 'Josa'), ('있어', 'Adjective'), ('’', 'Punctuation'), ('하면', 'Verb'), ('그', 'Determiner'), ('만이', 'Noun'), ('려니', 'Noun'), ('와', 'Josa'), ('워낙', 'Noun'), ('정직하고', 'Adjective'), ('나약한', 'Adjective'), ('형식', 'Noun'), ('이라', 'Josa'), (',', 'Punctuation'), ('조', 'Modifier'), ('곰', 'Noun'), ('이라도', 'Josa'), ('거짓말', 'Noun'), ('을', 'Josa'), ('못', 'VerbPrefix'), ('하여', 'Verb'), ('한참', 'Noun'), ('주저주저', 'Adverb'), ('하다가', 'Verb'), (',', 'Punctuation'), ('\\n', 'Foreign'), ('“', 'Foreign'), ('세시', 'Noun'), ('부터', 'Josa'), ('개인', 'Noun'), ('교수', 'Noun'), ('가', 'Josa'), ('있어', 'Adjective'), ('.', 'Punctuation'), ('”', 'Foreign'), ('\\n', 'Foreign'), ('“', 'Foreign'), ('영어', 'Noun'), ('?', 'Punctuation'), ('”', 'Foreign'), ('\\n', 'Foreign'), ('“', 'Foreign'), ('응', 'Noun'), ('.', 'Punctuation'), ('”', 'Foreign'), ('\\n', 'Foreign'), ('“', 'Foreign'), ('어떤', 'Adjective'), ('사람', 'Noun'), ('인데', 'Josa'), ('개인', 'Noun'), ('교수', 'Noun'), ('를', 'Josa'), ('받어', 'Verb'), ('?', 'Punctuation'), ('”', 'Foreign'), ('\\n', 'Foreign'), ('형식', 'Noun'), ('은', 'Josa'), ('말', 'Noun'), ('이', 'Josa'), ('막혔다', 'Verb'), ('.', 'Punctuation'), ('우선', 'Noun'), ('은', 'Josa'), ('남', 'Noun'), ('의', 'Josa'), ('폐간', 'Noun'), ('을', 'Josa'), ('꿰뚫어', 'Verb'), ('볼', 'Noun'), ('듯', 'Noun'), ('한', 'Josa'), ('두', 'Noun'), ('눈', 'Noun'), ('으로', 'Josa'), ('형식', 'Noun'), ('의', 'Josa'), ('얼굴', 'Noun'), ('을', 'Josa'), ('유심', 'Noun'), ('하게', 'Verb'), ('들여다본다', 'Verb'), ('.', 'Punctuation'), ('형식', 'Noun'), ('은', 'Josa'), ('눈', 'Noun'), ('이', 'Josa'), ('부신', 'Noun'), ('듯이', 'Noun'), ('고개', 'Noun'), ('를', 'Josa'), ('숙인다', 'Verb'), ('.', 'Punctuation'), ('\\n', 'Foreign'), ('“', 'Foreign'), ('응', 'Noun'), (',', 'Punctuation'), ('어떤', 'Adjective'), ('사람', 'Noun'), ('인데', 'Josa'), ('말', 'Noun'), ('을', 'Josa'), ('못', 'Noun'), ('하고', 'Verb'), ('얼굴', 'Noun'), ('이', 'Josa'), ('붉어지나', 'Adjective'), (',', 'Punctuation'), ('응', 'Noun'), ('?', 'Punctuation'), ('”', 'Foreign'), ('\\n', 'Foreign'), ('형식', 'Noun'), ('은', 'Josa'), ('민망하여', 'Adjective'), ('손', 'Noun'), ('으로', 'Josa'), ('목', 'Noun'), ('을', 'Josa'), ('쓸어', 'Verb'), ('만', 'Modifier'), ('지고', 'Noun'), ('하염없이', 'Adverb'), ('웃으며', 'Verb'), (',', 'Punctuation'), ('\\n', 'Foreign'), ('“', 'Foreign'), ('여자', 'Noun'), ('야', 'Josa'), ('.', 'Punctuation'), ('”', 'Foreign'), ('\\n', 'Foreign'), ('“', 'Foreign'), ('요', 'Noun'), ('―', 'Foreign'), ('오메', 'Noun'), ('데토오', 'Noun'), ('(', 'Punctuation'), ('아', 'Exclamation'), ('―', 'Foreign'), ('축하', 'Noun'), ('하네', 'Verb'), (').', 'Punctuation'), ('이', 'Determiner'), ('이나', 'Noun'), ('즈', 'Modifier'), ('케', 'Noun'), ('(', 'Punctuation'), ('약혼', 'Noun'), ('한', 'Josa'), ('사람', 'Noun'), (')', 'Punctuation'), ('가', 'Verb'), ('있나', 'Adjective'), ('보네', 'Verb'), ('그려', 'Verb'), ('.', 'Punctuation'), ('음', 'Noun'), ('나루', 'Noun'), ('호도', 'Noun'), ('(', 'Punctuation'), ('그러려니', 'Adjective'), (').', 'Punctuation'), ('그러', 'Adjective'), ('구도', 'Noun'), ('내게는', 'Verb'), ('아무', 'Noun'), ('말', 'Noun'), ('도', 'Josa'), ('없단', 'Adjective'), ('말', 'Noun'), ('이야', 'Josa'), ('.', 'Punctuation'), ('에', 'Josa'), (',', 'Punctuation'), ('여보', 'Noun'), ('게', 'Josa'), ('”', 'Foreign'), ('하고', 'Verb'), ('손', 'Noun'), ('을', 'Josa'), ('후려친다', 'Verb'), ('.', 'Punctuation'), ('\\n', 'Foreign'), ('형식', 'Noun'), ('은', 'Josa'), ('하도', 'Verb'), ('심란하여', 'Adjective'), ('구두', 'Noun'), ('로', 'Josa'), ('땅', 'Noun'), ('을', 'Josa'), ('파면', 'Noun'), ('서', 'Josa'), (',', 'Punctuation'), ('\\n', 'Foreign'), ('“', 'Foreign'), ('아니야', 'Adjective'), ('.', 'Punctuation'), ('저', 'Noun'), (',', 'Punctuation'), ('자네', 'Noun'), ('는', 'Josa'), ('모르겠네', 'Verb'), ('.', 'Punctuation'), ('김장', 'Noun'), ('로라', 'Noun'), ('고', 'Josa'), ('있느니', 'Adjective'), ('…….', 'Punctuation'), ('”', 'Foreign'), ('\\n', 'Foreign'), ('“', 'Foreign'), ('옳지', 'Adjective'), (',', 'Punctuation'), ('김', 'Noun'), ('장로', 'Noun'), ('의', 'Josa'), ('딸', 'Noun'), ('일세', 'Verb'), ('그려', 'Verb'), ('?', 'Punctuation'), ('응', 'Noun'), ('.', 'Punctuation'), ('저', 'Noun'), (',', 'Punctuation'), ('옳지', 'Adjective'), (',', 'Punctuation'), ('작년', 'Noun'), ('이지', 'Josa'), ('.', 'Punctuation'), ('정신', 'Noun'), ('여', 'Josa'), ('학교', 'Noun'), ('를', 'Josa'), ('우등', 'Noun'), ('으로', 'Josa'), ('졸업', 'Noun'), ('하고', 'Josa'), ('명년', 'Noun'), ('미국', 'Noun'), ('간다', 'Noun'), ('는', 'Josa'), ('그', 'Noun'), ('처녀', 'Noun'), ('로구먼', 'Josa'), ('.', 'Punctuation'), ('베리', 'Noun'), ('굿', 'Noun'), ('.', 'Punctuation'), ('”', 'Foreign'), ('\\n', 'Foreign'), ('“', 'Foreign'), ('자네', 'Noun'), ('어떻게', 'Adjective'), ('아는가', 'Verb'), ('?', 'Punctuation'), ('”', 'Foreign'), ('\\n', 'Foreign'), ('“', 'Foreign'), ('그것', 'Noun'), ('모르겠나', 'Verb'), ('.', 'Punctuation'), ('이', 'Noun'), ('야', 'Josa'), ('시쿠', 'Noun'), ('모', 'Noun'), ('(', 'Punctuation'), ('적어도', 'Adverb'), (')', 'Punctuation'), ('신문기자', 'Noun'), ('가', 'Josa'), ('.', 'Punctuation'), ('그런데', 'Conjunction'), ('언제', 'Noun'), ('엥게지먼트', 'Noun'), ('를', 'Josa'), ('하였는가', 'Verb'), ('.', 'Punctuation'), ('”', 'Foreign'), ('\\n', 'Foreign'), ('“', 'Foreign'), ('아니오', 'Adjective'), ('.', 'Punctuation'), ('준비', 'Noun'), ('를', 'Josa'), ('한다고', 'Verb'), ('날', 'Noun'), ('더러', 'Josa'), ('매일', 'Noun'), ('한', 'Verb'), ('시간', 'Noun'), ('씩', 'Suffix'), ('와', 'Verb'), ('달라기에', 'Adjective'), ('오늘', 'Noun'), ('처음', 'Noun'), ('가는', 'Verb'), ('길', 'Noun'), ('일세', 'Verb'), ('.', 'Punctuation'), ('”', 'Foreign'), ('\\n', 'Foreign'), ('“', 'Foreign'), ('아따', 'Noun'), (',', 'Punctuation'), ('나를', 'Verb'), ('속', 'Modifier'), ('이면', 'Noun'), ('어쩔', 'Adverb'), ('터', 'Noun'), ('인가', 'Josa'), ('.', 'Punctuation'), ('”', 'Foreign'), ('\\n', 'Foreign'), ('“', 'Foreign'), ('엑', 'Exclamation'), ('.', 'Punctuation'), ('”', 'Foreign'), ('\\n', 'Foreign'), ('“', 'Foreign'), ('히', 'Adverb'), ('히', 'Adverb'), (',', 'Punctuation'), ('그', 'Noun'), ('가', 'Josa'), ('유명한', 'Adjective'), ('미인', 'Noun'), ('이라', 'Josa'), ('대', 'Verb'), ('.', 'Punctuation'), ('자네', 'Noun'), ('힘', 'Noun'), ('에', 'Josa'), ('웬걸', 'Noun'), ('되겠', 'Verb'), ('나마', 'Noun'), ('는', 'Josa'), ('잘', 'Verb'), ('얼러', 'Verb'), ('보게', 'Verb'), ('.', 'Punctuation'), ('그러면', 'Adverb'), ('또', 'Noun'), ('보세', 'Verb'), ('”', 'Foreign'), ('하고', 'Verb'), ('대팻밥', 'Noun'), ('벙거지', 'Noun'), ('를', 'Josa'), ('벗어', 'Verb'), ('활활', 'Noun'), ('부채', 'Noun'), ('를', 'Josa'), ('하며', 'Verb'), ('교동', 'Noun'), ('골목', 'Noun'), ('으로', 'Josa'), ('내려간다', 'Verb'), ('.', 'Punctuation'), ('형식', 'Noun'), ('은', 'Josa'), ('이', 'Determiner'), ('때껏', 'Noun'), ('그', 'Noun'), ('의', 'Josa'), ('너무', 'Adverb'), ('방탕함을', 'Adjective'), ('허물', 'Noun'), ('하더니', 'Verb'), ('오늘', 'Noun'), ('은', 'Josa'), ('도리어', 'Noun'), ('그', 'Noun'), ('파탈', 'Noun'), ('하고', 'Josa'), ('쾌활함이', 'Adjective'), ('부러운', 'Adjective'), ('듯', 'Noun'), ('하다', 'Verb'), ('.', 'Punctuation'), ('\\n\\n', 'Foreign'), ('2', 'Number'), ('\\n', 'Foreign')]\n"
-     ]
-    }
-   ],
-   "source": [
-    "print(sentences_tag[0])"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 6,
+   "execution_count": 7,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -125,14 +95,13 @@
     "#twitter\n",
     "for sentence1 in sentences_tag:\n",
     "    for word, tag in sentence1:\n",
-    "        if len(word)>1:\n",
-    "            if tag in ['Noun']: #komoran\n",
-    "                noun_adj.append(word)"
+    "        if tag in ['Noun']: #komoran\n",
+    "            noun_adj.append(word)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 7,
+   "execution_count": 8,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -141,7 +110,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 8,
+   "execution_count": 9,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -154,7 +123,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 9,
+   "execution_count": 10,
    "metadata": {
     "scrolled": true
    },
@@ -182,7 +151,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 10,
+   "execution_count": 11,
    "metadata": {},
    "outputs": [
     {
@@ -208,7 +177,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 11,
+   "execution_count": 12,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -544,18 +513,14 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 1,
+   "execution_count": 27,
    "metadata": {},
    "outputs": [
     {
-     "ename": "NameError",
-     "evalue": "name 'vectorize' is not defined",
-     "output_type": "error",
-     "traceback": [
-      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
-      "\u001b[1;31mNameError\u001b[0m                                 Traceback (most recent call last)",
-      "\u001b[1;32m<ipython-input-1-7e852b3030fa>\u001b[0m in \u001b[0;36m<module>\u001b[1;34m\u001b[0m\n\u001b[0;32m      1\u001b[0m \u001b[1;31m# search 문장 벡터\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[1;32m----> 2\u001b[1;33m srch_vector = vectorize.transform([\n\u001b[0m\u001b[0;32m      3\u001b[0m     \u001b[1;34m'형식 선형'\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m      4\u001b[0m ])\n\u001b[0;32m      5\u001b[0m \u001b[1;33m\u001b[0m\u001b[0m\n",
-      "\u001b[1;31mNameError\u001b[0m: name 'vectorize' is not defined"
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "(1, 7)\n"
      ]
     }
    ],
@@ -563,7 +528,7 @@
     "\n",
     "# search 문장 벡터\n",
     "srch_vector = vectorize.transform([\n",
-    "    '형식 선형'\n",
+    "    '형식'\n",
     "])\n",
     " \n",
     "print(srch_vector.shape)\n",
