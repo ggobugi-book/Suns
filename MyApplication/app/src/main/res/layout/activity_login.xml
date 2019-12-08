@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".loginActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        >
+
+        <LinearLayout
+            android:layout_alignParentTop="true"
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+
+            <ImageView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:id="@+id/imageView2"
+                app:srcCompat="?attr/actionModeCloseDrawable" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="        로그인"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                android:layout_weight="1"
+                >
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/topLayout"
+
+
+            android:id="@+id/imageLayout"
+
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="75dp"
+
+            >
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="30dp"
+                app:srcCompat="@drawable/mybooklogo"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/idtextLayout"
+            android:layout_below="@+id/imageLayout"
+
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+
+            android:orientation="horizontal"
+            android:layout_marginTop="420dp"
+            android:layout_marginRight="20dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+
+                android:text="아이디"
+                android:textAlignment="center"
+
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textSize="15dp"
+                />
+
+            <EditText
+                android:id="@+id/register_id"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+
+                android:hint="  ID를 입력하세요"
+                android:text="admin"
+                android:textSize="16dp"
+
+
+                android:layout_weight="1"
+                android:background="@drawable/border"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/pwdtextLayout"
+            android:layout_below="@+id/idtextLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="비밀번호"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/register_pw"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+
+                android:hint="  비밀번호를 입력하세요."
+
+                android:text="1234"
+                android:textSize="16dp"
+
+                android:inputType="textPassword"
+
+
+
+                android:background="@drawable/border"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/pwdtextLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text=""
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:text="비밀번호를 잊으셨나요?"
+                android:textAlignment="textStart"
+                android:textColor="#c8c8c8"
+
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/joinButtonLayout"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#00ff0000"
+                />
+
+            <Button
+                android:id="@+id/register_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+
+                android:background="@drawable/main_button"
+                android:text="로그인"
+                android:textColor="@android:color/white"
+
+
+                android:textSize="15dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#00ff0000"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/joinButtonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#00ff0000"
+                />
+
+            <Button
+                android:id="@+id/register_btn1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:background="@drawable/main_button"
+                android:text="회원가입"
+                android:textColor="@android:color/white"
+                android:textSize="15dp"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#00ff0000"
+                />
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
