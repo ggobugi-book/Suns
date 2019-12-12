@@ -1,2 +1,13 @@
-﻿'어린 왕자' NNP
-'바오밥나무'    NNP
+﻿어린 왕자	NNP 
+바오밥나무	NNP
+지리학자	NNP
+천문학자	NNP
+가로등 켜는 사람	NNP
+사막여우	NNP
+허영심	NNP
+왕	NNP
+양	NNP
+아무도	NP
+하지	VV
+병욱	NNP
+영채	NNP
